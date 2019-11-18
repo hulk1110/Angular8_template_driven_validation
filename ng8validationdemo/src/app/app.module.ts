@@ -1,14 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { ConfirmEqualValidatorDirective } from './confirm-equal-validator.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,ConfirmEqualValidatorDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
