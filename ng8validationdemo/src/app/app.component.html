@@ -19,6 +19,9 @@
                     
                   </div>
                 </div>
+
+
+
                 <div class="form-group">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Email" [(ngModel)]="user.email"
                     #email="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [ngClass]="{ 'is-invalid': fs.submitted && email.invalid }" required />
@@ -27,12 +30,18 @@
                       <div *ngIf="email.errors.email">Enter a valid email address</div>
                   </div>
                 </div>
+
+
+
                 <div class="form-group">
                   <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone No." [(ngModel)]="user.phone" maxlength="12" minlength="10" #phone="ngModel" [ngClass]="{ 'is-invalid': fs.submitted && phone.invalid }" required />
                   <div *ngIf="fs.submitted && phone.invalid" class="invalid-feedback">
                       <div *ngIf="phone.errors.required">Phone is required</div>
                   </div>
                 </div>
+
+
+
                 <div class="form-group">
                   <input type="password" class="form-control" name="password" id="password" placeholder="Password" [(ngModel)]="user.password" #password="ngModel" [ngClass]="{ 'is-invalid': fs.submitted && password.invalid}" required />
                   <div *ngIf="fs.submitted && password.invalid"class="invalid-feedback">
@@ -41,6 +50,9 @@
                     </div>
                   </div>                  
                 </div>
+
+
+
                 <div class="form-group">
                   <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Confirm Password" [(ngModel)]="confirm_password" #confirmPassword="ngModel" [ngClass]="{ 'is-invalid': fs.submitted && confirmPassword.invalid }" required                appConfirmEqualValidator='password' />
                   <div *ngIf="fs.submitted && confirmPassword.invalid" class="invalid-feedback">
@@ -58,12 +70,16 @@
                     </div>
                   </div>
                 </div>
+
+
                 <div class="form-group">
                   <span style="text-align: center;color: #a94442">{{errorMsg}}</span>
                   <span style="text-align: center;color: #28a745">{{sucsMsg}}</span>
                   <button type="submit" class="btn btn-primary signin">Sign Up <span class="arrowbtn"><span
                         class="fa fa-arrow-right"></span></span></button>
                 </div>
+             
+             
               </div>
           </form>
         </div>
