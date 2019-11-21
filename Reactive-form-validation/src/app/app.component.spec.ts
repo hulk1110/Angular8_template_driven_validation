@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'template-driven-form-validation'`, () => {
+  it(`should have as title 'Demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('template-driven-form-validation');
+    expect(app.title).toEqual('Demo');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to template-driven-form-validation!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Demo app is running!');
   });
 });
